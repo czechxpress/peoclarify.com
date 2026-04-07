@@ -439,6 +439,8 @@ details[open] .faq-q { color: var(--gold); }
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .mobile-menu.open { display: flex; }
+  /* 5-step grid collapses to 2 columns on tablet */
+  .steps-five { grid-template-columns: repeat(2, 1fr) !important; }
 }
 @media (max-width: 600px) {
   .industry-grid { grid-template-columns: 1fr; }

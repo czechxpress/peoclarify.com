@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our PEO Partners | PEO Clarify</title>
+  <meta name="description" content="We evaluated over 50 PEOs before selecting our 6 partners. Each was chosen for specific reasons. Together they cover every medical option, technology platform, and business type we encounter." />
+  <link rel="canonical" href="https://www.peoclarify.com/partners.html" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .partners-hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 55%, #133A6B 100%);
+      padding: 80px 0 72px; position: relative; overflow: hidden;
+    }
+    .partners-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 60% at 80% 50%, rgba(200,134,10,.1) 0%, transparent 70%);
+    }
+    .vetting-banner {
+      background: var(--navy); border-radius: var(--radius-lg);
+      padding: 40px 48px; display: grid;
+      grid-template-columns: 160px 1fr; gap: 36px;
+      align-items: center; margin-bottom: 64px;
+      position: relative; overflow: hidden;
+    }
+    .vetting-banner::before {
+      content: ''; position: absolute; top: -40%; right: -5%;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(200,134,10,.15) 0%, transparent 70%);
+    }
+    .vetting-stat { text-align: center; position: relative; z-index: 1; }
+    .vetting-num {
+      font-family: var(--font-head); font-size: 5.5rem;
+      font-weight: 700; color: var(--gold); line-height: 1; display: block;
+    }
+    .vetting-label { color: rgba(255,255,255,.55); font-size: .88rem; font-weight: 500; display: block; margin-top: 4px; }
+    .vetting-text { position: relative; z-index: 1; }
+    .vetting-text h3 { color: white; font-size: 1.35rem; margin-bottom: 12px; }
+    .vetting-text p { color: rgba(255,255,255,.72); font-size: .97rem; line-height: 1.75; margin: 0; }
+    .vetting-text p + p { margin-top: 12px; }
+    .vetting-text strong { color: white; }
+
+    .partners-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 28px; margin-bottom: 64px;
+    }
+    .partner-card {
+      background: white; border-radius: var(--radius-lg);
+      border: 1.5px solid var(--gray-200); box-shadow: var(--shadow-sm);
+      overflow: hidden; display: flex; flex-direction: column;
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+    .partner-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--navy); }
+    .partner-logo-area {
+      padding: 32px 28px 24px; display: flex; align-items: center;
+      justify-content: center; min-height: 110px;
+      border-bottom: 1px solid var(--gray-100);
+      background: var(--gray-50); transition: background .22s ease;
+    }
+    .partner-card:hover .partner-logo-area { background: #EEF2F8; }
+    .partner-logo-area img { max-height: 48px; max-width: 180px; object-fit: contain; transition: transform .22s ease; }
+    .partner-card:hover .partner-logo-area img { transform: scale(1.06); }
+    .partner-wordmark { font-family: var(--font-head); font-size: 1.7rem; font-weight: 700; letter-spacing: -.02em; }
+    .partner-body { padding: 24px 28px 28px; flex: 1; display: flex; flex-direction: column; }
+    .partner-name { font-family: var(--font-head); font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+    .partner-desc { font-size: .93rem; color: var(--text-light); line-height: 1.7; margin-bottom: 16px; flex: 1; }
+    .partner-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .tag { display: inline-flex; align-items: center; background: #EFF6FF; color: var(--navy); border: 1px solid rgba(37,99,235,.15); padding: 4px 10px; border-radius: 100px; font-size: .77rem; font-weight: 600; }
+    .tag.gold { background: var(--gold-pale); color: var(--gold); border-color: rgba(200,134,10,.2); }
+    .tag.teal { background: var(--teal-light); color: var(--teal); border-color: rgba(13,115,119,.2); }
+    .partner-why { background: var(--gray-50); border-radius: 8px; padding: 12px 14px; font-size: .87rem; color: var(--text-light); line-height: 1.6; }
+    .partner-why strong { display: block; color: var(--navy); font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 4px; }
+
+    .criteria-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 56px; }
+    .criteria-card { background: white; border-radius: var(--radius); border: 1px solid var(--gray-200); padding: 24px 20px; text-align: center; box-shadow: var(--shadow-sm); }
+    .criteria-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .criteria-card h4 { color: var(--navy); font-size: .97rem; margin-bottom: 6px; }
+    .criteria-card p { font-size: .84rem; color: var(--text-light); }
+
+    .process-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .process-step { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--gray-100); }
+    .process-step:last-child { border-bottom: none; }
+    .process-num { width: 32px; height: 32px; border-radius: 50%; background: var(--navy); color: white; font-size: .85rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .process-text strong { display: block; color: var(--navy); font-size: .97rem; margin-bottom: 3px; }
+    .process-text span { font-size: .88rem; color: var(--text-light); }
+
+    @media (max-width: 900px) {
+      .partners-grid { grid-template-columns: 1fr 1fr; }
+      .criteria-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-grid { grid-template-columns: 1fr; }
+      .vetting-banner { grid-template-columns: 1fr; text-align: center; padding: 32px 24px; }
+      .vetting-num { font-size: 4rem; }
+    }
+    @media (max-width: 600px) {
+      .partners-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">PEO <span>Clarify</span></a>
+    <div class="nav-links">
+      <a href="how-peo-works.html">How PEO Works</a>
+      <a href="why-an-advisor.html">Why an Advisor</a>
+      <a href="partners.html">Our Partners</a>
+      <a href="industries.html">Industries</a>
+      <a href="about.html">About</a>
+      <a href="assessment.html" class="nav-cta">Get a Free Assessment</a>
+    </div>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+  <div class="mobile-menu">
+    <a href="how-peo-works.html">How PEO Works</a>
+    <a href="why-an-advisor.html">Why an Advisor</a>
+    <a href="partners.html">Our Partners</a>
+    <a href="industries.html">Industries</a>
+    <a href="about.html">About</a>
+    <a href="assessment.html" class="nav-cta">Get a Free Assessment</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="partners-hero">
+  <div class="container" style="text-align:center; position:relative; z-index:1;">
+    <span class="hero-eyebrow" style="display:inline-flex; margin: 0 auto 20px;">🤝 Our PEO Panel</span>
+    <h1 style="color:white; margin-bottom:16px;">50+ evaluated. 6 selected.</h1>
+    <p class="lead" style="color:rgba(255,255,255,.75); max-width:640px; margin:0 auto 36px;">
+      We didn't partner with the first PEOs we called. We evaluated the field — and selected six that together give our clients access to the best options in medical, ancillary benefits, and technology on the market.
+    </p>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+      <a href="assessment.html" class="btn btn-primary">Find My Best Fit</a>
+      <a href="#partners" class="btn btn-white">See the Panel</a>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-white">
+  <div class="container">
+
+    <!-- Vetting story -->
+    <div class="vetting-banner">
+      <div class="vetting-stat">
+        <span class="vetting-num">50+</span>
+        <span class="vetting-label">PEOs evaluated</span>
+      </div>
+      <div class="vetting-text">
+        <h3>Why we work with 6 — and only 6</h3>
+        <p>Before we recommended a single PEO to a single client, we did the work. We evaluated over 50 PEOs across the country — reviewing medical carrier networks, ancillary benefit quality, technology platforms, workers comp underwriting, service models, and pricing structures.</p>
+        <p><strong>These six made the panel because together they cover the market without overlap.</strong> Each brings something different in terms of benefit options, technology approach, and service model — which means when we compare them for your business, you are seeing genuinely different options, not six variations of the same product.</p>
+        <p><strong>Cost matters, but best fit matters more.</strong> All six compete for every recommendation we make. None receives preferential treatment. That keeps their pricing honest and their service quality high.</p>
+      </div>
+    </div>
+
+    <!-- Partner Cards -->
+    <div class="section-header" style="margin-bottom:36px;">
+      <span class="eyebrow">The Panel</span>
+      <h2 id="partners">Our 6 PEO partners</h2>
+      <p>Each was selected for specific reasons. Together they cover every combination of industry, company size, benefits need, and technology preference we encounter.</p>
+    </div>
+
+    <div class="partners-grid">
+
+      <!-- ADP TotalSource -->
+      <div class="partner-card">
+        <div class="partner-logo-area" style="background:#F5F7FA;">
+          <img src="https://www.adp.com/-/media/adp/redesign2018/ui/logo-adp.svg" alt="ADP TotalSource"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span class="partner-wordmark" style="display:none;color:#D42B1E;">ADP</span>
+        </div>
+        <div class="partner-body">
+          <div class="partner-name">ADP TotalSource</div>
+          <p class="partner-desc">IRS-certified (CPEO) and one of the largest PEOs in the United States. ADP TotalSource combines enterprise-level compliance infrastructure with a dedicated HR Business Partner model — giving every client access to large-group benefit plans, 50-state payroll, and legally-backed HR guidance.</p>
+          <div class="partner-tags">
+            <span class="tag gold">CPEO Certified</span>
+            <span class="tag">50-State Payroll</span>
+            <span class="tag teal">HR Business Partner</span>
+          </div>
+          <div class="partner-why">
+            <strong>Why they're on the panel</strong>
+            Compliance depth, enterprise benefit access, and a dedicated advisory model that scales across industries and company sizes
+          </div>
+        </div>
+      </div>
+
+      <!-- TriNet -->
+      <div class="partner-card">
+        <div class="partner-logo-area" style="background:#F0F4FA;">
+          <img src="https://www.trinet.com/images/default-source/logos/trinet-logo.png" alt="TriNet"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span class="partner-wordmark" style="display:none;color:#0055A5;">TriNet</span>
+        </div>
+        <div class="partner-body">
+          <div class="partner-name">TriNet</div>
+          <p class="partner-desc">TriNet organizes its service teams by industry vertical — tech, life sciences, financial services, nonprofits, and professional services. That structure means the HR team supporting your business understands your industry, not just HR administration in general. Strong medical and ancillary benefit options across all verticals.</p>
+          <div class="partner-tags">
+            <span class="tag gold">Industry Verticals</span>
+            <span class="tag">Rich Benefits</span>
+            <span class="tag teal">National Footprint</span>
+          </div>
+          <div class="partner-why">
+            <strong>Why they're on the panel</strong>
+            Industry-specific HR expertise and benefit quality that gives sector-focused businesses a genuine advantage
+          </div>
+        </div>
+      </div>
+
+      <!-- Paychex -->
+      <div class="partner-card">
+        <div class="partner-logo-area" style="background:#F5F8FF;">
+          <img src="https://www.paychex.com/sites/default/files/2023-04/paychex-logo.svg" alt="Paychex"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span class="partner-wordmark" style="display:none;color:#004B8D;">Paychex</span>
+        </div>
+        <div class="partner-body">
+          <div class="partner-name">Paychex</div>
+          <p class="partner-desc">More than 50 years of payroll and HR infrastructure. Paychex brings the broadest industry coverage of any partner on our panel, with flexible service tiers and one of the most comprehensive ancillary benefits portfolios available — medical, dental, vision, 401(k), FSA, HSA, and more.</p>
+          <div class="partner-tags">
+            <span class="tag gold">50+ Year Track Record</span>
+            <span class="tag">All Industries</span>
+            <span class="tag teal">Broad Ancillary Benefits</span>
+          </div>
+          <div class="partner-why">
+            <strong>Why they're on the panel</strong>
+            Proven stability, the widest industry reach on our panel, and ancillary benefit depth that few PEOs can match
+          </div>
+        </div>
+      </div>
+
+      <!-- G&A Partners -->
+      <div class="partner-card">
+        <div class="partner-logo-area" style="background:#F5FAF5;">
+          <img src="https://www.gapartners.com/wp-content/uploads/2021/03/GA-Partners-Logo.png" alt="G&A Partners"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span class="partner-wordmark" style="display:none;color:#2E7D32;">G&amp;A Partners</span>
+        </div>
+        <div class="partner-body">
+          <div class="partner-name">G&amp;A Partners</div>
+          <p class="partner-desc">G&A Partners is built around a high-touch service model with low client-to-advisor ratios. Every client gets a dedicated HR advisor — not a shared service center. Strong medical and benefits options, flexible workers comp underwriting, and a relationship-driven approach that stands out in a category full of ticket queues.</p>
+          <div class="partner-tags">
+            <span class="tag gold">Dedicated HR Advisors</span>
+            <span class="tag">High-Touch Service</span>
+            <span class="tag teal">Flexible Underwriting</span>
+          </div>
+          <div class="partner-why">
+            <strong>Why they're on the panel</strong>
+            Service model quality and advisor accessibility that volume-focused PEOs structurally cannot replicate
+          </div>
+        </div>
+      </div>
+
+      <!-- Justworks -->
+      <div class="partner-card">
+        <div class="partner-logo-area" style="background:#F0FAF9;">
+          <img src="https://images.ctfassets.net/zw48pl1isxmc/2ZzToRZBJdwP7TkLJO8HBb/b0bf6f1abf2d05e6e03f10cc7c7a6e7a/justworks-logo-black.svg" alt="Justworks"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span class="partner-wordmark" style="display:none;color:#00B388;font-family:var(--font-body);font-size:1.4rem;">Justworks</span>
+        </div>
+        <div class="partner-body">
+          <div class="partner-name">Justworks</div>
+          <p class="partner-desc">Justworks is built around simplicity and pricing transparency — flat-fee PEPM structure, clean self-service technology, and benefits packages designed to help growing teams compete for talent without administrative complexity. IRS-certified (CPEO) with fast onboarding and a platform employees actually use.</p>
+          <div class="partner-tags">
+            <span class="tag gold">CPEO Certified</span>
+            <span class="tag">Transparent Pricing</span>
+            <span class="tag teal">Fast Onboarding</span>
+          </div>
+          <div class="partner-why">
+            <strong>Why they're on the panel</strong>
+            Pricing clarity and platform simplicity that removes friction for companies that want PEO value without PEO complexity
+          </div>
+        </div>
+      </div>
+
+      <!-- Rippling -->
+      <div class="partner-card">
+        <div class="partner-logo-area" style="background:#FFF8F0;">
+          <img src="https://www.rippling.com/blog/content/images/2023/06/rippling-logo.svg" alt="Rippling"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span class="partner-wordmark" style="display:none;color:#F5A623;">Rippling</span>
+        </div>
+        <div class="partner-body">
+          <div class="partner-name">Rippling</div>
+          <p class="partner-desc">Rippling unifies payroll, benefits, HR, IT, and app provisioning in a single platform. For companies where HR and technology operations overlap — or where eliminating disconnected systems is a priority — Rippling brings a level of integration and automation that distinguishes it from every other partner on our panel.</p>
+          <div class="partner-tags">
+            <span class="tag gold">HR + IT Unified</span>
+            <span class="tag">Deep Integrations</span>
+            <span class="tag teal">Workflow Automation</span>
+          </div>
+          <div class="partner-why">
+            <strong>Why they're on the panel</strong>
+            Technology integration depth and automation capabilities for companies where HR and IT need to operate as one system
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Evaluation criteria -->
+    <div class="section-header">
+      <span class="eyebrow">Our Evaluation Criteria</span>
+      <h2>What we assessed across 50+ PEOs</h2>
+      <p>These are the eight factors that drove our selection — and the same factors we use when recommending a partner for your business.</p>
+    </div>
+    <div class="criteria-grid">
+      <div class="criteria-card">
+        <div class="criteria-icon">🏥</div>
+        <h4>Medical Plan Quality</h4>
+        <p>Carrier networks, plan designs, and deductible structures. We compare the actual benefits, not just the premium.</p>
+      </div>
+      <div class="criteria-card">
+        <div class="criteria-icon">➕</div>
+        <h4>Ancillary Benefits</h4>
+        <p>Dental, vision, life, disability, EAP, FSA, HSA, and 401(k) quality. Often where the real differentiation lives.</p>
+      </div>
+      <div class="criteria-card">
+        <div class="criteria-icon">💻</div>
+        <h4>Technology Platform</h4>
+        <p>Payroll, onboarding, time tracking, and employee self-service. The platform your team uses every day matters.</p>
+      </div>
+      <div class="criteria-card">
+        <div class="criteria-icon">🦺</div>
+        <h4>Workers Comp</h4>
+        <p>Carrier strength, risk class appetite, and claims management. Critical for any company with physical risk exposure.</p>
+      </div>
+      <div class="criteria-card">
+        <div class="criteria-icon">👥</div>
+        <h4>Service Model</h4>
+        <p>Dedicated advisor versus shared service center. Response times, account stability, and what happens when you have a real problem.</p>
+      </div>
+      <div class="criteria-card">
+        <div class="criteria-icon">⚖️</div>
+        <h4>Compliance Depth</h4>
+        <p>Multi-state expertise, EPLI coverage, and proactive compliance support as employment law changes.</p>
+      </div>
+      <div class="criteria-card">
+        <div class="criteria-icon">💰</div>
+        <h4>Total Cost</h4>
+        <p>PEPM fees, benefit pass-through rates, and any additional charges. We benchmark every proposal against current market rates.</p>
+      </div>
+      <div class="criteria-card">
+        <div class="criteria-icon">📈</div>
+        <h4>Growth Fit</h4>
+        <p>Can this PEO scale with you? What does exit look like when you're ready to build in-house? We think 3 years ahead.</p>
+      </div>
+    </div>
+
+    <!-- Process + no favorites -->
+    <div class="process-grid">
+      <div>
+        <span class="eyebrow" style="display:block;color:var(--gold);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;">How We Match You</span>
+        <h2 style="margin-bottom:24px;">From assessment to recommendation</h2>
+        <div class="process-step">
+          <div class="process-num">1</div>
+          <div class="process-text"><strong>Profile your business</strong><span>We gather data on your industry, headcount, state footprint, current HR setup, workers comp history, and technology environment — so every recommendation is built on your actual situation, not a generic profile</span></div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">2</div>
+          <div class="process-text"><strong>We identify your top 2 fits</strong><span>Using everything we collected, we evaluate the panel and recommend the two PEOs that are the strongest match for your business. You get our reasoning, not just a list</span></div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">3</div>
+          <div class="process-text"><strong>We set up the meetings</strong><span>We coordinate introductory meetings with your top 2 recommended PEOs so you can hear directly from them — their approach, service model, and how they work with companies like yours. We run the process so you don't have to chase anyone</span></div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">4</div>
+          <div class="process-text"><strong>Demos, quotes, and negotiation</strong><span>After your meetings and demos, we collect formal proposals based on your specific needs. We benchmark every number against current market rates and negotiate on your behalf before anything is presented to you</span></div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">5</div>
+          <div class="process-text"><strong>You make the final call</strong><span>We present a clear side-by-side comparison with our recommendation and reasoning. The decision is yours — and we stay with you after implementation to make sure the relationship delivers</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:20px; border-top: 3px solid var(--gold);">
+          <h3 style="margin-bottom:10px;">No favorites. No steering.</h3>
+          <p style="margin-bottom:12px;">All six partners are treated equally. We don't have a preferred PEO that earns more, gets first look, or receives any preferential placement. Our six partners know they compete for every engagement we work on.</p>
+          <p>That competition is intentional. It keeps pricing competitive and service standards high — which produces better outcomes for every client we advise.</p>
+        </div>
+        <div class="highlight-box">
+          <p><strong>Why not more than 6?</strong> We reviewed over 50 PEOs before finalizing the panel. The ones that didn't make it had service quality issues, limited geographic reach, narrow industry appetite, or couldn't consistently compete on pricing. We review the panel regularly and update it when the landscape changes.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Not sure which of the six fits your business?</h2>
+      <p>That's exactly what the free assessment is for. Twenty minutes and we'll tell you which partners make sense for your situation — and which ones to skip.</p>
+      <a href="assessment.html" class="btn btn-primary btn-lg">Book a Free Assessment</a>
+      <p class="cta-note">No obligation. No pressure. We'll give you a straight answer.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">PEO <span>Clarify</span></div>
+        <p>Independent PEO advisory for growing businesses.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Learn</h5>
+        <a href="how-peo-works.html">How PEO Works</a>
+        <a href="why-an-advisor.html">Why Use an Advisor</a>
+        <a href="partners.html">Our Partners</a>
+        <a href="industries.html">Industries</a>
+      </div>
+      <div class="footer-col">
+        <h5>Get Started</h5>
+        <a href="assessment.html">Free Assessment</a>
+        <a href="about.html">About Us</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="mailto:peter.sustr@imacorp.com">peter.sustr@imacorp.com</a>
+        <a href="assessment.html">Book a Call</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 PEO Clarify. All rights reserved.</p>
+      <div class="footer-ima"><span>An advisory practice of</span><span class="ima-badge">IMA Financial Group</span></div>
+    </div>
+  </div>
+</footer>
+<script src="nav.js"></script>
+</body>
+</html>

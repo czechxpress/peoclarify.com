@@ -1,5 +1,5 @@
 // nav.js — shared navigation and footer injected on all pages
-const CALENDLY_URL = "https://calendly.com/peter-sustr/peo-assessment"; // UPDATE THIS
+const CALENDLY_URL = "https://calendly.com/petersustr/new-meeting-1";
 
 document.addEventListener("DOMContentLoaded", () => {
   // ── Hamburger toggle ──
