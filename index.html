@@ -3,468 +3,187 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Independent PEO Advisor | Compare PEOs for Your Business | PEO Clarify</title>
-  <meta name="description" content="PEO Clarify is an independent PEO advisory firm backed by IMA Financial Group. We evaluated 50+ PEOs, selected the best 6, and find the right fit for your business — at no cost to you." />
-  <meta name="keywords" content="PEO advisor, independent PEO broker, PEO comparison, best PEO for small business, PEO consulting, professional employer organization, find a PEO, PEO broker" />
-  <link rel="canonical" href="https://www.peoclarify.com/" />
-  <link rel="stylesheet" href="style.css" />
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Independent PEO Advisor | Compare PEOs for Your Business | PEO Clarify" />
-  <meta property="og:description" content="We evaluated 50+ PEOs and work with the best 6. Independent advice, no cost to employers. Find the right PEO for your business." />
-  <meta property="og:url" content="https://www.peoclarify.com/" />
-  <meta property="og:site_name" content="PEO Clarify" />
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Independent PEO Advisor | PEO Clarify" />
-  <meta name="twitter:description" content="We evaluated 50+ PEOs and work with the best 6. Independent advice, no cost to employers." />
-  <!-- Schema: ProfessionalService -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "PEO Clarify",
-    "description": "Independent PEO advisory firm. We compare professional employer organizations and find the right fit for growing businesses at no cost to the employer.",
-    "url": "https://www.peoclarify.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Denver",
-      "addressRegion": "CO",
-      "addressCountry": "US"
-    },
-    "areaServed": "US",
-    "serviceType": "PEO Advisory and Consulting",
-    "priceRange": "Free to employers",
-    "founder": {
-      "@type": "Person",
-      "name": "Peter Sustr",
-      "jobTitle": "National PEO Solutions Leader"
-    }
-  }
-  </script>
-  <!-- Schema: FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What exactly is a PEO?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A Professional Employer Organization co-employs your workforce. They handle payroll, taxes, benefits administration, workers comp, and HR compliance while you keep full control of your business operations."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What does an independent PEO advisor cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nothing. Advisors are compensated by the PEO you ultimately choose. Using an advisor does not increase your cost — and experienced advisors often negotiate better pricing than employers get going direct."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How is PEO Clarify different from calling a PEO directly?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "When you call a PEO directly, you talk to their sales representative. We work for you, not for any single PEO. We compare 6 carefully selected partners, benchmark pricing, and recommend the option that genuinely fits your business."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are we too small for a PEO?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "PEOs are specifically designed for companies with 5 to 150 employees. Smaller companies actually get a disproportionately large benefit because they gain access to benefits and compliance infrastructure they could never afford independently."
-        }
-      }
-    ]
-  }
-  </script>
+  <title>PEO Resources & Guides for Business Owners | PEO Clarify</title>
+  <meta name="description" content="Plain-language PEO guides for business owners. Learn how PEOs work, what they cost, when to use one, and how to choose between providers — without the sales pitch." />
+  <link rel="canonical" href="https://www.peoclarify.com/blog" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .blog-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
+    .blog-card { background: white; border-radius: var(--radius-lg); border: 1.5px solid var(--gray-200); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .2s, box-shadow .2s; display: flex; flex-direction: column; }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .blog-card-img { height: 160px; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; }
+    .blog-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .blog-tag { display: inline-block; background: var(--blue-pale, #EFF6FF); color: var(--navy); border: 1px solid rgba(37,99,235,.15); padding: 3px 10px; border-radius: 100px; font-size: .75rem; font-weight: 600; margin-bottom: 10px; }
+    .blog-card h3 { font-size: 1.05rem; margin-bottom: 10px; color: var(--navy); line-height: 1.35; }
+    .blog-card p { font-size: .88rem; color: var(--text-light); flex: 1; margin-bottom: 16px; }
+    .blog-read { font-size: .85rem; font-weight: 600; color: var(--gold); }
+    @media(max-width:900px){ .blog-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:600px){ .blog-grid { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
-
-<!-- ── NAVIGATION ── -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">PEO <span>Clarify</span></a>
+    <a href="../index.html" class="nav-logo">PEO <span>Clarify</span></a>
     <div class="nav-links">
-      <a href="how-peo-works.html">How PEO Works</a>
-      <a href="why-an-advisor.html">Why an Advisor</a>
-      <a href="partners.html">Our Partners</a>
-      <a href="industries.html">Industries</a>
-      <a href="blog/index.html">Resources</a>
-      <a href="about.html">About</a>
-      <a href="assessment.html" class="nav-cta">Get a Free Assessment</a>
+      <a href="../how-peo-works.html">How PEO Works</a>
+      <a href="../why-an-advisor.html">Why an Advisor</a>
+      <a href="../partners.html">Our Partners</a>
+      <a href="../industries.html">Industries</a>
+      <a href="index.html">Resources</a>
+      <a href="../about.html">About</a>
+      <a href="../assessment.html" class="nav-cta">Get a Free Assessment</a>
     </div>
-    <div class="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </div>
+    <div class="hamburger"><span></span><span></span><span></span></div>
   </div>
   <div class="mobile-menu">
-    <a href="how-peo-works.html">How PEO Works</a>
-    <a href="why-an-advisor.html">Why an Advisor</a>
-    <a href="partners.html">Our Partners</a>
-    <a href="industries.html">Industries</a>
-      <a href="blog/index.html">Resources</a>
-    <a href="about.html">About</a>
-    <a href="assessment.html" class="nav-cta">Get a Free Assessment</a>
+    <a href="../how-peo-works.html">How PEO Works</a>
+    <a href="../why-an-advisor.html">Why an Advisor</a>
+    <a href="../partners.html">Our Partners</a>
+    <a href="../industries.html">Industries</a>
+    <a href="index.html">Resources</a>
+    <a href="../about.html">About</a>
+    <a href="../assessment.html" class="nav-cta">Get a Free Assessment</a>
   </div>
 </nav>
 
-<!-- ── HERO ── -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div>
-        <div class="hero-eyebrow">
-          <span>⚖️</span> Independent PEO Advisory
-        </div>
-        <h1>Find the right PEO.<br><em>Skip the sales pitch.</em></h1>
-        <p class="lead">We are not a PEO. We compare every option on the market, negotiate on your behalf, and help your business get the most from HR outsourcing — at no cost to you.</p>
-        <div class="hero-actions">
-          <a href="assessment.html" class="btn btn-primary btn-lg">Get a Free Assessment</a>
-          <a href="how-peo-works.html" class="btn btn-white">Learn How PEO Works →</a>
-        </div>
-        <div class="hero-trust">
-          <div class="trust-item">Multi-PEO Panel</div>
-          <div class="trust-item">No Cost to Employers</div>
-          <div class="trust-item">Backed by IMA Financial Group</div>
-          <div class="trust-item">National Coverage</div>
-        </div>
-      </div>
-
-      <div class="hero-card">
-        <div class="hero-card-title">What we do for you</div>
-        <div class="hero-card-list">
-          <div class="hero-card-item">
-            <div class="hero-card-icon">🔍</div>
-            <div class="hero-card-text">
-              <strong>Shop the entire market</strong>
-              <span>We request proposals from our 6 curated partners — selected from 50+ PEOs we evaluated</span>
-            </div>
-          </div>
-          <div class="hero-card-item">
-            <div class="hero-card-icon">📊</div>
-            <div class="hero-card-text">
-              <strong>Compare side by side</strong>
-              <span>Pricing, benefits quality, technology, and service model</span>
-            </div>
-          </div>
-          <div class="hero-card-item">
-            <div class="hero-card-icon">💬</div>
-            <div class="hero-card-text">
-              <strong>Negotiate on your behalf</strong>
-              <span>We know current market rates and flag anything overpriced</span>
-            </div>
-          </div>
-          <div class="hero-card-item">
-            <div class="hero-card-icon">📈</div>
-            <div class="hero-card-text">
-              <strong>Stay with you as you grow</strong>
-              <span>We manage the relationship and help you exit when the time is right</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<section style="background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 100%);padding:64px 0 56px;">
+  <div class="container" style="text-align:center;">
+    <span class="hero-eyebrow" style="display:inline-flex;margin:0 auto 20px;">📚 Resources</span>
+    <h1 style="color:white;margin-bottom:14px;">PEO Guides for Business Owners</h1>
+    <p class="lead" style="color:rgba(255,255,255,.72);max-width:560px;margin:0 auto;">Plain-language answers to the questions every business owner has about PEOs — before, during, and after the decision.</p>
   </div>
 </section>
 
-<!-- ── HOW IT WORKS ── -->
 <section class="section bg-white">
   <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">The Process</span>
-      <h2>How we find the right PEO for your business</h2>
-      <p>From first conversation to signed agreement, we run the entire process. Most clients are in a PEO within 3 to 4 weeks — without talking to a single sales rep until they're ready to.</p>
-    </div>
-    <div style="display:grid; grid-template-columns: repeat(5,1fr); gap:20px; position:relative;">
-      <!-- connector line -->
-      <div style="position:absolute; top:44px; left:10%; right:10%; height:2px; background:linear-gradient(90deg, var(--navy), var(--gold)); opacity:.2; z-index:0;"></div>
+    <div class="blog-grid">
 
-      <div class="step-card" style="position:relative; z-index:1;">
-        <div class="step-num">01</div>
-        <h3>Profile &amp; Discover</h3>
-        <p>We gather everything that matters — industry, headcount, state footprint, HR setup, workers comp history, and technology environment. This data drives every recommendation we make.</p>
-      </div>
-      <div class="step-card" style="position:relative; z-index:1;">
-        <div class="step-num">02</div>
-        <h3>We Identify Your Top 2 Fits</h3>
-        <p>Using your profile, we evaluate our panel and recommend the two PEOs that are the strongest match. You get our reasoning — not just a list of options to figure out yourself.</p>
-      </div>
-      <div class="step-card" style="position:relative; z-index:1;">
-        <div class="step-num">03</div>
-        <h3>We Set Up the Meetings</h3>
-        <p>We coordinate introductory meetings with your top 2 recommended PEOs. You hear directly from them — their approach, service model, and how they work with businesses like yours. We handle the scheduling.</p>
-      </div>
-      <div class="step-card" style="position:relative; z-index:1;">
-        <div class="step-num">04</div>
-        <h3>Demos, Quotes &amp; Negotiation</h3>
-        <p>After demos and discussions, we collect formal proposals based on your specific needs. We benchmark every number against current market rates and negotiate on your behalf before you see a single figure.</p>
-      </div>
-      <div class="step-card" style="position:relative; z-index:1;">
-        <div class="step-num">05</div>
-        <h3>You Make the Call</h3>
-        <p>We present a clear side-by-side comparison with our recommendation. The decision is yours. We stay with you after implementation to make sure the relationship delivers what was promised.</p>
-      </div>
-    </div>
-    <div style="text-align:center; margin-top:36px;">
-      <a href="assessment.html" class="btn btn-primary">Start the Process — Free Assessment</a>
-    </div>
-  </div>
-</section>
-
-<!-- ── WHY ADVISOR TEASER ── -->
-<section class="section" style="background: var(--gray-50);">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">Why It Matters</span>
-      <h2>Going direct costs you more than you think</h2>
-      <p>When you talk to a PEO directly, you talk to their salesperson. When you work with us, you get someone who has already seen a hundred proposals and knows what fair looks like.</p>
-    </div>
-    <table class="compare-table">
-      <thead>
-        <tr>
-          <th></th>
-          <th class="bad">Going Direct to a PEO</th>
-          <th class="good">Working with PEO Clarify</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Who's in your corner</strong></td>
-          <td class="bad-cell">Their sales rep, paid to close you</td>
-          <td class="good-cell">An independent advisor paid to find your best fit</td>
-        </tr>
-        <tr>
-          <td><strong>Pricing benchmark</strong></td>
-          <td class="bad-cell">Whatever they quote you</td>
-          <td class="good-cell">We know current market rates and negotiate accordingly</td>
-        </tr>
-        <tr>
-          <td><strong>Options reviewed</strong></td>
-          <td class="bad-cell">One company's product</td>
-          <td class="good-cell">6 carefully selected PEOs compared against your specific profile</td>
-        </tr>
-        <tr>
-          <td><strong>Contract review</strong></td>
-          <td class="bad-cell">Figure it out yourself</td>
-          <td class="good-cell">We walk you through what matters and what to push back on</td>
-        </tr>
-        <tr>
-          <td><strong>When you grow</strong></td>
-          <td class="bad-cell">Start the process over alone</td>
-          <td class="good-cell">We manage the relationship and help you transition</td>
-        </tr>
-        <tr>
-          <td><strong>Cost to you</strong></td>
-          <td class="bad-cell">Same as working with us</td>
-          <td class="good-cell">No cost — advisors are compensated by the PEO you choose</td>
-        </tr>
-      </tbody>
-    </table>
-    <div style="text-align:center; margin-top: 32px;">
-      <a href="why-an-advisor.html" class="btn btn-secondary">See the Full Breakdown →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ── PARTNERS ── -->
-<section class="section" style="background: var(--gray-50);">
-  <div class="container">
-    <div style="display:grid; grid-template-columns: 1fr 340px; gap:56px; align-items:center; margin-bottom:48px;">
-      <div>
-        <span class="eyebrow" style="display:block; color:var(--gold); font-size:.82rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; margin-bottom:12px;">Our PEO Panel</span>
-        <h2 style="margin-bottom:16px;">50+ evaluated. 6 selected.</h2>
-        <p class="lead" style="margin-bottom:16px;">Before we recommended a single PEO to a client, we evaluated the field. We reviewed over 50 PEOs — their medical networks, ancillary benefits, technology platforms, workers comp underwriting, and service models.</p>
-        <p style="margin-bottom:24px;">These six made the panel because together they cover the market without overlap. Each brings something different — so when we compare them for your business, you're seeing genuinely different options, not six versions of the same product.</p>
-        <a href="partners.html" class="btn btn-secondary">See Why We Chose These Six →</a>
-      </div>
-      <div style="background:var(--navy); border-radius:var(--radius-lg); padding:28px 24px; text-align:center;">
-        <div style="font-family:var(--font-head); font-size:5rem; font-weight:700; color:var(--gold); line-height:1; margin-bottom:4px;">50+</div>
-        <div style="color:rgba(255,255,255,.6); font-size:.9rem; margin-bottom:24px; padding-bottom:24px; border-bottom:1px solid rgba(255,255,255,.12);">PEOs evaluated</div>
-        <div style="font-family:var(--font-head); font-size:3.5rem; font-weight:700; color:white; line-height:1; margin-bottom:4px;">6</div>
-        <div style="color:rgba(255,255,255,.6); font-size:.9rem;">selected for your benefit</div>
-      </div>
-    </div>
-
-    <!-- 6 partner cards - compact -->
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:0;">
-
-      <div style="background:white; border-radius:12px; border:1.5px solid var(--gray-200); padding:20px 20px 18px; box-shadow:0 1px 3px rgba(0,0,0,.06); display:flex; flex-direction:column; gap:12px; transition:transform .2s, box-shadow .2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(11,45,89,.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 1px 3px rgba(0,0,0,.06)'">
-        <div style="height:44px; display:flex; align-items:center;">
-          <img src="https://www.adp.com/-/media/adp/redesign2018/ui/logo-adp.svg" alt="ADP TotalSource" style="max-height:32px;max-width:140px;object-fit:contain;" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span style="display:none;font-weight:700;color:#D42B1E;font-size:1.1rem;">ADP</span>
+      <a href="what-is-a-peo.html" class="blog-card" style="text-decoration:none;">
+        <div class="blog-card-img" style="background:#EFF6FF;">🏢</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">PEO Basics</span>
+          <h3>What Is a PEO and Is One Right for Your Business?</h3>
+          <p>The plain-language guide every business owner should read before calling a single PEO sales rep.</p>
+          <span class="blog-read">Read the guide →</span>
         </div>
-        <p style="font-size:.85rem;color:var(--text-light);line-height:1.6;margin:0;">IRS-certified CPEO. Enterprise compliance infrastructure, dedicated HR Business Partner, and large-group benefit access.</p>
-      </div>
+      </a>
 
-      <div style="background:white; border-radius:12px; border:1.5px solid var(--gray-200); padding:20px 20px 18px; box-shadow:0 1px 3px rgba(0,0,0,.06); display:flex; flex-direction:column; gap:12px; transition:transform .2s, box-shadow .2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(11,45,89,.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 1px 3px rgba(0,0,0,.06)'">
-        <div style="height:44px; display:flex; align-items:center;">
-          <img src="https://www.trinet.com/images/default-source/logos/trinet-logo.png" alt="TriNet" style="max-height:32px;max-width:140px;object-fit:contain;" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span style="display:none;font-weight:700;color:#0055A5;font-size:1.1rem;">TriNet</span>
+      <a href="peo-pricing-explained.html" class="blog-card" style="text-decoration:none;">
+        <div class="blog-card-img" style="background:#FEF3C7;">💰</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Pricing</span>
+          <h3>PEO Pricing Explained: PEPM vs. % of Payroll (And What's Fair)</h3>
+          <p>How PEOs actually charge, what market rates look like, and the line items worth negotiating.</p>
+          <span class="blog-read">Read the guide →</span>
         </div>
-        <p style="font-size:.85rem;color:var(--text-light);line-height:1.6;margin:0;">Industry-specific service teams for tech, life sciences, financial services, nonprofits, and professional services.</p>
-      </div>
+      </a>
 
-      <div style="background:white; border-radius:12px; border:1.5px solid var(--gray-200); padding:20px 20px 18px; box-shadow:0 1px 3px rgba(0,0,0,.06); display:flex; flex-direction:column; gap:12px; transition:transform .2s, box-shadow .2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(11,45,89,.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 1px 3px rgba(0,0,0,.06)'">
-        <div style="height:44px; display:flex; align-items:center;">
-          <img src="https://www.paychex.com/sites/default/files/2023-04/paychex-logo.svg" alt="Paychex" style="max-height:32px;max-width:140px;object-fit:contain;" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span style="display:none;font-weight:700;color:#004B8D;font-size:1.1rem;">Paychex</span>
+      <a href="signs-your-business-needs-a-peo.html" class="blog-card" style="text-decoration:none;">
+        <div class="blog-card-img" style="background:#DCFCE7;">✅</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Decision Guide</span>
+          <h3>5 Signs Your Business Is Ready for a PEO</h3>
+          <p>Most business owners wait too long. Here are the five signals that tell you it's time to act.</p>
+          <span class="blog-read">Read the guide →</span>
         </div>
-        <p style="font-size:.85rem;color:var(--text-light);line-height:1.6;margin:0;">50+ years of payroll infrastructure. Broadest industry coverage and most comprehensive ancillary benefits portfolio on our panel.</p>
-      </div>
+      </a>
 
-      <div style="background:white; border-radius:12px; border:1.5px solid var(--gray-200); padding:20px 20px 18px; box-shadow:0 1px 3px rgba(0,0,0,.06); display:flex; flex-direction:column; gap:12px; transition:transform .2s, box-shadow .2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(11,45,89,.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 1px 3px rgba(0,0,0,.06)'">
-        <div style="height:44px; display:flex; align-items:center;">
-          <img src="https://www.gapartners.com/wp-content/uploads/2021/03/GA-Partners-Logo.png" alt="G&A Partners" style="max-height:32px;max-width:140px;object-fit:contain;" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span style="display:none;font-weight:700;color:#2E7D32;font-size:1.1rem;">G&amp;A Partners</span>
+      <a href="peo-vs-payroll.html" class="blog-card" style="text-decoration:none;">
+        <div class="blog-card-img" style="background:#F0F4FA;">⚖️</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Comparison</span>
+          <h3>PEO vs. Payroll Service: What's the Actual Difference?</h3>
+          <p>A payroll service processes checks. A PEO does something fundamentally different. Here's exactly what.</p>
+          <span class="blog-read">Read the guide →</span>
         </div>
-        <p style="font-size:.85rem;color:var(--text-light);line-height:1.6;margin:0;">Dedicated HR advisors with low client ratios. High-touch service model and flexible workers comp underwriting.</p>
-      </div>
+      </a>
 
-      <div style="background:white; border-radius:12px; border:1.5px solid var(--gray-200); padding:20px 20px 18px; box-shadow:0 1px 3px rgba(0,0,0,.06); display:flex; flex-direction:column; gap:12px; transition:transform .2s, box-shadow .2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(11,45,89,.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 1px 3px rgba(0,0,0,.06)'">
-        <div style="height:44px; display:flex; align-items:center;">
-          <img src="https://images.ctfassets.net/zw48pl1isxmc/2ZzToRZBJdwP7TkLJO8HBb/b0bf6f1abf2d05e6e03f10cc7c7a6e7a/justworks-logo-black.svg" alt="Justworks" style="max-height:32px;max-width:140px;object-fit:contain;" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span style="display:none;font-weight:700;color:#00B388;font-size:1.1rem;font-family:var(--font-body);">Justworks</span>
+      <a href="how-to-choose-a-peo.html" class="blog-card" style="text-decoration:none;">
+        <div class="blog-card-img" style="background:#FFF8F0;">🔍</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Evaluation</span>
+          <h3>How to Choose a PEO: 8 Questions Every Business Owner Should Ask</h3>
+          <p>Before you sign anything, ask these. The answers will tell you everything you need to know.</p>
+          <span class="blog-read">Read the guide →</span>
         </div>
-        <p style="font-size:.85rem;color:var(--text-light);line-height:1.6;margin:0;">CPEO certified. Flat-fee pricing transparency, fast onboarding, and a clean platform employees actually use.</p>
-      </div>
+      </a>
 
-      <div style="background:white; border-radius:12px; border:1.5px solid var(--gray-200); padding:20px 20px 18px; box-shadow:0 1px 3px rgba(0,0,0,.06); display:flex; flex-direction:column; gap:12px; transition:transform .2s, box-shadow .2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(11,45,89,.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 1px 3px rgba(0,0,0,.06)'">
-        <div style="height:44px; display:flex; align-items:center;">
-          <img src="https://www.rippling.com/blog/content/images/2023/06/rippling-logo.svg" alt="Rippling" style="max-height:32px;max-width:140px;object-fit:contain;" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/><span style="display:none;font-weight:700;color:#F5A623;font-size:1.1rem;">Rippling</span>
+      <a href="peo-vs-in-house-hr.html" class="blog-card" style="text-decoration:none;">
+        <div class="blog-card-img" style="background:#FEF3C7;">⚖️</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Comparison</span>
+          <h3>PEO vs. In-House HR: Which Makes More Sense for a Growing Business?</h3>
+          <p>Hire an HR person or use a PEO? Here is the honest cost comparison and how to know which is right for your stage.</p>
+          <span class="blog-read">Read the guide →</span>
         </div>
-        <p style="font-size:.85rem;color:var(--text-light);line-height:1.6;margin:0;">HR, IT, payroll, and app provisioning unified in one platform. Built for companies where HR and technology need to operate as one system.</p>
-      </div>
+      </a>
+
+      <a href="peo-benefits-small-business.html" class="blog-card" style="text-decoration:none;">
+        <div class="blog-card-img" style="background:#DCFCE7;">🏆</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Recruiting & Retention</span>
+          <h3>How Small Businesses Use PEOs to Compete for Talent Against Bigger Companies</h3>
+          <p>A 20-person company can offer better health insurance than a 500-person competitor. Here's the math.</p>
+          <span class="blog-read">Read the guide →</span>
+        </div>
+      </a>
+
+      <a href="peo-evaluation-checklist.html" class="blog-card" style="text-decoration:none;">
+        <div class="blog-card-img" style="background:#EFF6FF;">✅</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Due Diligence</span>
+          <h3>The PEO Evaluation Checklist: 15 Things to Review Before You Sign</h3>
+          <p>The complete due diligence checklist. Covers pricing, benefits, workers comp, service model, and contract terms.</p>
+          <span class="blog-read">Read the guide →</span>
+        </div>
+      </a>
+
+      <a href="peo-co-employment-explained.html" class="blog-card" style="text-decoration:none;">
+        <div class="blog-card-img" style="background:#F0F4FA;">🤝</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">PEO Education</span>
+          <h3>PEO Co-Employment: What It Actually Means (and What It Doesn't)</h3>
+          <p>Co-employment is the most misunderstood part of working with a PEO. Here is what it actually means.</p>
+          <span class="blog-read">Read the guide →</span>
+        </div>
+      </a>
+
+      <a href="switching-peos.html" class="blog-card" style="text-decoration:none;">
+        <div class="blog-card-img" style="background:#D9F2F3;">🔄</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">PEO Transitions</span>
+          <h3>How to Switch PEOs Without Disrupting Your Business</h3>
+          <p>Already with a PEO but want to switch? The complete guide to changing providers cleanly.</p>
+          <span class="blog-read">Read the guide →</span>
+        </div>
+      </a>
 
     </div>
   </div>
 </section>
 
-<!-- ── INDUSTRIES ── -->
-<section class="section bg-white">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">Industries We Serve</span>
-      <h2>PEO fit varies by industry</h2>
-      <p>Workers comp rates, benefits benchmarks, and compliance requirements differ significantly by sector. We know which PEOs are strongest in each.</p>
-    </div>
-    <div class="industry-grid">
-      <a href="industries.html#tech" class="industry-tile">
-        <div class="industry-icon">💻</div>
-        <h4>Technology & Startups</h4>
-        <p>Equity-friendly benefits, fast onboarding, multi-state hiring</p>
-      </a>
-      <a href="industries.html#healthcare" class="industry-tile">
-        <div class="industry-icon">🏥</div>
-        <h4>Healthcare Practices</h4>
-        <p>Credentialing, EPLI exposure, high-risk workers comp</p>
-      </a>
-      <a href="industries.html#construction" class="industry-tile">
-        <div class="industry-icon">🏗️</div>
-        <h4>Construction & Trades</h4>
-        <p>Workers comp savings, certified payroll, safety programs</p>
-      </a>
-      <a href="industries.html#professional" class="industry-tile">
-        <div class="industry-icon">💼</div>
-        <h4>Professional Services</h4>
-        <p>Retention benefits, compliance support, HR infrastructure</p>
-      </a>
-      <a href="industries.html#nonprofit" class="industry-tile">
-        <div class="industry-icon">🤝</div>
-        <h4>Nonprofits</h4>
-        <p>Cost efficiency, grant compliance, mission-aligned benefits</p>
-      </a>
-      <a href="industries.html#manufacturing" class="industry-tile">
-        <div class="industry-icon">⚙️</div>
-        <h4>Manufacturing</h4>
-        <p>Safety programs, workers comp management, OSHA support</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ── FAQ ── -->
-<section class="section" style="background: var(--gray-50);">
-  <div class="container" style="max-width: 780px;">
-    <div class="section-header">
-      <span class="eyebrow">Common Questions</span>
-      <h2>Before you call a PEO, read this</h2>
-    </div>
-    <details class="faq-item">
-      <summary class="faq-q">What exactly is a PEO? <span>+</span></summary>
-      <p class="faq-a">A Professional Employer Organization co-employs your workforce alongside you. They handle payroll, taxes, benefits administration, workers comp, and HR compliance — while you keep full control over hiring, management, and day-to-day operations. You get the HR infrastructure of a large company at a fraction of what it would cost to build in-house.</p>
-    </details>
-    <details class="faq-item">
-      <summary class="faq-q">What does an independent advisor cost? <span>+</span></summary>
-      <p class="faq-a">Nothing. Advisors are compensated by the PEO you ultimately choose, as a commission built into the PEO's pricing structure. Using an advisor does not increase your cost — and in most cases, experienced advisors negotiate better pricing than employers get going direct.</p>
-    </details>
-    <details class="faq-item">
-      <summary class="faq-q">How is PEO Clarify different from calling a PEO directly? <span>+</span></summary>
-      <p class="faq-a">When you call a PEO directly, you talk to that company's sales representative. Their job is to close you on their product. We work for you, not for any single PEO. We compare the market, benchmark pricing, and recommend the option that fits your business — even if that means a smaller or less well-known PEO is the right answer.</p>
-    </details>
-    <details class="faq-item">
-      <summary class="faq-q">Are we too small for a PEO? <span>+</span></summary>
-      <p class="faq-a">PEOs are specifically designed for companies with 5 to 150 employees. That is the exact profile they are built for. In fact, smaller companies get a disproportionately large benefit because they gain access to benefits and compliance infrastructure they could never afford to build independently.</p>
-    </details>
-    <details class="faq-item">
-      <summary class="faq-q">Do we lose control of our employees? <span>+</span></summary>
-      <p class="faq-a">No. Co-employment is a legal and administrative structure — not a management arrangement. You hire, fire, manage, set compensation, and define your culture. The PEO handles the administrative employer functions: payroll taxes, benefits enrollment, workers comp, and compliance filings.</p>
-    </details>
-    <details class="faq-item">
-      <summary class="faq-q">What if we already have a PEO? <span>+</span></summary>
-      <p class="faq-a">We can review your current arrangement, benchmark your pricing against the market, and tell you whether you are getting a good deal. If the fit is wrong or pricing has drifted, we help you transition. If you are in a good spot, we will tell you that too.</p>
-    </details>
-  </div>
-</section>
-
-<!-- ── FINAL CTA ── -->
 <section class="section-sm">
   <div class="container">
     <div class="cta-banner">
-      <h2>Not sure if a PEO is right for you?</h2>
-      <p>That is exactly what the free assessment is for. We will give you an honest answer, explain what a PEO should cost for a company your size, and tell you which ones are worth talking to.</p>
-      <a href="assessment.html" class="btn btn-primary btn-lg">Book a Free 20-Minute Assessment</a>
-      <p class="cta-note">No obligation. No sales pitch. We will tell you if a PEO is not the right answer.</p>
+      <h2>Still have questions? Let's talk.</h2>
+      <p>A 20-minute conversation is faster than reading every article on the internet. We'll tell you honestly whether a PEO makes sense for your business.</p>
+      <a href="../assessment.html" class="btn btn-primary btn-lg">Book a Free Assessment</a>
     </div>
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="nav-logo">PEO <span>Clarify</span></div>
-        <p>Independent PEO advisory for growing businesses. We compare the market so you do not have to.</p>
-      </div>
-      <div class="footer-col">
-        <h5>Learn</h5>
-        <a href="how-peo-works.html">How PEO Works</a>
-        <a href="why-an-advisor.html">Why Use an Advisor</a>
-        <a href="industries.html">Industries</a>
-      <a href="blog/index.html">Resources</a>
-      </div>
-      <div class="footer-col">
-        <h5>Get Started</h5>
-        <a href="assessment.html">Free Assessment</a>
-        <a href="about.html">About Us</a>
-      </div>
-      <div class="footer-col">
-        <h5>Contact</h5>
-        <a href="mailto:peter.sustr@imacorp.com">peter.sustr@imacorp.com</a>
-        <a href="assessment.html">Book a Call</a>
-      </div>
+      <div class="footer-brand"><div class="nav-logo">PEO <span>Clarify</span></div><p>Independent PEO advisory for growing businesses.</p></div>
+      <div class="footer-col"><h5>Learn</h5><a href="../how-peo-works.html">How PEO Works</a><a href="../why-an-advisor.html">Why Use an Advisor</a><a href="../partners.html">Our Partners</a><a href="index.html">Resources</a></div>
+      <div class="footer-col"><h5>Get Started</h5><a href="../assessment.html">Free Assessment</a><a href="../about.html">About Us</a></div>
+      <div class="footer-col"><h5>Contact</h5><a href="mailto:peter.sustr@imacorp.com">peter.sustr@imacorp.com</a></div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 PEO Clarify. All rights reserved.</p>
-      <div class="footer-ima">
-        <span>An advisory practice of</span>
-        <span class="ima-badge">IMA Financial Group</span>
-      </div>
-    </div>
+    <div class="footer-bottom"><p>© 2026 PEO Clarify. All rights reserved.</p><div class="footer-ima"><span>An advisory practice of</span><span class="ima-badge">IMA Financial Group</span></div></div>
   </div>
 </footer>
-
-<script src="nav.js"></script>
+<script src="../nav.js"></script>
 </body>
 </html>
