@@ -1,3 +1,6 @@
+# Force .html → no-extension redirects (must use 301! to override existing files)
+
+# Core pages
 /index.html              /                          301!
 /how-peo-works.html      /how-peo-works             301!
 /why-an-advisor.html     /why-an-advisor            301!
@@ -5,14 +8,30 @@
 /industries.html         /industries                301!
 /assessment.html         /assessment                301!
 /about.html              /about                     301!
+/methodology.html        /methodology               301!
+/calculator.html         /calculator                301!
+
+# Root-level duplicates → canonical blog versions
+/ichra-vs-peo                                  /blog/ichra-vs-peo                                  301!
+/ichra-vs-peo.html                             /blog/ichra-vs-peo                                  301!
+/trinet-vs-insperity-vs-adp-totalsource        /blog/trinet-vs-insperity-vs-adp-totalsource        301!
+/trinet-vs-insperity-vs-adp-totalsource.html   /blog/trinet-vs-insperity-vs-adp-totalsource        301!
+
+# Blog index
 /blog/index.html         /blog/                     301!
-/blog/what-is-a-peo.html                    /blog/what-is-a-peo                    301!
-/blog/peo-pricing-explained.html            /blog/peo-pricing-explained            301!
-/blog/signs-your-business-needs-a-peo.html  /blog/signs-your-business-needs-a-peo  301!
-/blog/peo-vs-payroll.html                   /blog/peo-vs-payroll                   301!
-/blog/how-to-choose-a-peo.html              /blog/how-to-choose-a-peo              301!
-/blog/peo-vs-in-house-hr.html               /blog/peo-vs-in-house-hr               301!
-/blog/peo-benefits-small-business.html      /blog/peo-benefits-small-business      301!
-/blog/peo-evaluation-checklist.html         /blog/peo-evaluation-checklist         301!
-/blog/peo-co-employment-explained.html      /blog/peo-co-employment-explained      301!
-/blog/switching-peos.html                   /blog/switching-peos                   301!
+
+# Blog posts
+/blog/what-is-a-peo.html                              /blog/what-is-a-peo                              301!
+/blog/peo-pricing-explained.html                      /blog/peo-pricing-explained                      301!
+/blog/signs-your-business-needs-a-peo.html            /blog/signs-your-business-needs-a-peo            301!
+/blog/peo-vs-payroll.html                             /blog/peo-vs-payroll                             301!
+/blog/how-to-choose-a-peo.html                        /blog/how-to-choose-a-peo                        301!
+/blog/peo-vs-in-house-hr.html                         /blog/peo-vs-in-house-hr                         301!
+/blog/peo-benefits-small-business.html                /blog/peo-benefits-small-business                301!
+/blog/peo-evaluation-checklist.html                   /blog/peo-evaluation-checklist                   301!
+/blog/peo-co-employment-explained.html                /blog/peo-co-employment-explained                301!
+/blog/switching-peos.html                             /blog/switching-peos                             301!
+/blog/adp-totalsource-review.html                     /blog/adp-totalsource-review                     301!
+/blog/justworks-vs-rippling.html                      /blog/justworks-vs-rippling                      301!
+/blog/ichra-vs-peo.html                               /blog/ichra-vs-peo                               301!
+/blog/trinet-vs-insperity-vs-adp-totalsource.html     /blog/trinet-vs-insperity-vs-adp-totalsource     301!

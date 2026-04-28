@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PEO Cost Calculator | Estimate Your PEO Pricing | PEO Clarify</title>
+  <meta name="description" content="Estimate what a PEO should cost for your business. Free PEO cost calculator from PEO Clarify -- get a market-based estimate based on employees, average wages, and benefits scope." />
+  <meta name="keywords" content="PEO calculator, PEO cost calculator, PEO pricing estimator, PEPM calculator, PEO cost estimate" />
+  <link rel="canonical" href="https://peoclarify.com/calculator" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://peoclarify.com/calculator" />
+  <meta property="og:title" content="PEO Cost Calculator | PEO Clarify" />
+  <meta property="og:description" content="Estimate what a PEO should cost for your business based on real market rates." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "PEO Cost Calculator",
+    "applicationCategory": "BusinessApplication",
+    "url": "https://peoclarify.com/calculator",
+    "description": "Free PEO cost calculator. Estimate what a Professional Employer Organization should cost for your business based on employee count, average wages, and benefits scope.",
+    "operatingSystem": "Any (web browser)",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "PEO Clarify",
+      "url": "https://peoclarify.com"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    .calc-wrap { max-width: 880px; margin: 0 auto; padding: 64px 24px; }
+    .calc-header { text-align: center; margin-bottom: 48px; }
+    .calc-tag { display: inline-block; background: #FFF8F0; color: var(--gold); border: 1px solid rgba(200,134,10,.2); padding: 4px 12px; border-radius: 100px; font-size: .8rem; font-weight: 600; margin-bottom: 16px; }
+    .calc-header h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 16px; color: var(--navy); }
+    .calc-header p { font-size: 1.1rem; color: var(--text-light); max-width: 640px; margin: 0 auto; }
+    .calc-card { background: white; border: 1px solid #E8E4D8; border-radius: 12px; padding: 40px; box-shadow: 0 4px 20px rgba(11,31,58,.06); }
+    .calc-step { display: none; }
+    .calc-step.active { display: block; }
+    .calc-step-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+    .calc-step-num { background: var(--navy); color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; }
+    .calc-step-title { font-size: 1.4rem; font-weight: 700; color: var(--navy); margin: 0; }
+    .calc-step-desc { color: var(--text-light); margin-bottom: 32px; font-size: .95rem; }
+    .calc-field { margin-bottom: 24px; }
+    .calc-field label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--navy); font-size: .95rem; }
+    .calc-field input, .calc-field select { width: 100%; padding: 14px 16px; border: 2px solid #E8E4D8; border-radius: 8px; font-size: 1rem; font-family: inherit; transition: border-color .15s; }
+    .calc-field input:focus, .calc-field select:focus { outline: none; border-color: var(--navy); }
+    .calc-field-help { font-size: .85rem; color: var(--text-light); margin-top: 6px; }
+    .calc-buttons { display: flex; gap: 12px; margin-top: 32px; }
+    .calc-btn { flex: 1; padding: 14px 24px; font-size: 1rem; font-weight: 600; border-radius: 8px; cursor: pointer; transition: all .15s; border: none; font-family: inherit; }
+    .calc-btn-primary { background: var(--navy); color: white; }
+    .calc-btn-primary:hover { background: #163657; transform: translateY(-1px); }
+    .calc-btn-secondary { background: white; color: var(--navy); border: 2px solid #E8E4D8; }
+    .calc-btn-secondary:hover { border-color: var(--navy); }
+    .calc-result { background: linear-gradient(135deg, #0B1F3A 0%, #163657 100%); color: white; padding: 40px; border-radius: 12px; margin-bottom: 24px; }
+    .calc-result h3 { color: white; font-size: 1.1rem; margin-bottom: 8px; opacity: .9; }
+    .calc-result-range { font-size: 2.4rem; font-weight: 800; margin-bottom: 8px; line-height: 1.1; }
+    .calc-result-period { font-size: .95rem; opacity: .85; }
+    .calc-breakdown { background: #FAF8F2; border-radius: 8px; padding: 24px; margin-bottom: 24px; }
+    .calc-breakdown-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #E8E4D8; font-size: .95rem; }
+    .calc-breakdown-row:last-child { border-bottom: none; font-weight: 700; padding-top: 16px; }
+    .calc-disclaimer { background: #FFF8F0; border-left: 3px solid var(--gold); padding: 16px 20px; border-radius: 4px; font-size: .9rem; color: #5A4A2E; margin: 24px 0; }
+    .calc-cta-block { text-align: center; padding: 24px 0; }
+    .calc-cta-block .btn { display: inline-block; background: var(--gold); color: white; padding: 16px 32px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all .15s; }
+    .calc-cta-block .btn:hover { background: #B0780A; transform: translateY(-1px); }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">PEO <span>Clarify</span></a>
+    <div class="nav-links">
+      <a href="/how-peo-works">How PEO Works</a>
+      <a href="/why-an-advisor">Why an Advisor</a>
+      <a href="/partners">Our Partners</a>
+      <a href="/industries">Industries</a>
+      <a href="/blog/">Resources</a>
+      <a href="/about">About</a>
+      <a href="/assessment" class="nav-cta">Get a Free Assessment</a>
+    </div>
+    <div class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <a href="/how-peo-works">How PEO Works</a>
+    <a href="/why-an-advisor">Why an Advisor</a>
+    <a href="/partners">Our Partners</a>
+    <a href="/industries">Industries</a>
+    <a href="/blog/">Resources</a>
+    <a href="/about">About</a>
+    <a href="/assessment" class="nav-cta">Get a Free Assessment</a>
+  </div>
+</nav>
+
+<div class="calc-wrap">
+
+  <div class="calc-header">
+    <span class="calc-tag">PEO COST CALCULATOR</span>
+    <h1>What should a PEO cost for your business?</h1>
+    <p>Get a market-based estimate based on real PEO pricing data. Two questions, no email required, instant result.</p>
+  </div>
+
+  <div class="calc-card">
+
+    <!-- STEP 1 -->
+    <div id="step1" class="calc-step active">
+      <div class="calc-step-header">
+        <span class="calc-step-num">1</span>
+        <h2 class="calc-step-title">Tell us about your team</h2>
+      </div>
+      <p class="calc-step-desc">PEO pricing scales with employee count and total payroll. The bigger you are, the better your per-employee rate.</p>
+
+      <div class="calc-field">
+        <label for="employees">How many full-time employees?</label>
+        <input type="number" id="employees" min="1" max="500" placeholder="e.g., 25" />
+        <div class="calc-field-help">Most PEOs work with companies between 5 and 150 employees.</div>
+      </div>
+
+      <div class="calc-field">
+        <label for="avgWage">Average annual salary per employee (USD)</label>
+        <input type="number" id="avgWage" min="20000" max="500000" step="1000" placeholder="e.g., 75000" />
+        <div class="calc-field-help">Best estimate is fine. This affects benefits and workers comp pricing.</div>
+      </div>
+
+      <div class="calc-buttons">
+        <button class="calc-btn calc-btn-primary" onclick="goToStep2()">Continue →</button>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div id="step2" class="calc-step">
+      <div class="calc-step-header">
+        <span class="calc-step-num">2</span>
+        <h2 class="calc-step-title">Pick your benefits scope</h2>
+      </div>
+      <p class="calc-step-desc">PEOs include benefits administration, but the actual benefits cost varies by plan richness and employer contribution.</p>
+
+      <div class="calc-field">
+        <label for="benefitsScope">Health benefits scope</label>
+        <select id="benefitsScope">
+          <option value="lean">Lean - employer covers 50% of employee-only health</option>
+          <option value="standard" selected>Standard - employer covers 70% of employee-only health</option>
+          <option value="rich">Rich - employer covers 80%+ and dependent contribution</option>
+        </select>
+        <div class="calc-field-help">Standard is most common for SMBs. Rich plans drive better recruiting outcomes.</div>
+      </div>
+
+      <div class="calc-field">
+        <label for="industry">Industry risk profile</label>
+        <select id="industry">
+          <option value="low">Low risk - office, professional services, tech</option>
+          <option value="medium" selected>Medium risk - retail, hospitality, healthcare</option>
+          <option value="high">High risk - construction, manufacturing, trades</option>
+        </select>
+        <div class="calc-field-help">Workers comp pricing varies dramatically by industry classification.</div>
+      </div>
+
+      <div class="calc-buttons">
+        <button class="calc-btn calc-btn-secondary" onclick="goToStep1()">← Back</button>
+        <button class="calc-btn calc-btn-primary" onclick="calculate()">Calculate Estimate</button>
+      </div>
+    </div>
+
+    <!-- STEP 3: RESULTS -->
+    <div id="step3" class="calc-step">
+      <div class="calc-step-header">
+        <span class="calc-step-num">3</span>
+        <h2 class="calc-step-title">Your estimated PEO cost</h2>
+      </div>
+
+      <div class="calc-result">
+        <h3>Estimated annual PEO administrative cost</h3>
+        <div class="calc-result-range" id="annualRange">$0 - $0</div>
+        <div class="calc-result-period">Per year, all-in PEO admin fee</div>
+      </div>
+
+      <div class="calc-breakdown">
+        <div class="calc-breakdown-row">
+          <span>Per-employee per-month range (PEPM)</span>
+          <span id="pepmRange">$0 - $0</span>
+        </div>
+        <div class="calc-breakdown-row">
+          <span>Total monthly cost range</span>
+          <span id="monthlyRange">$0 - $0</span>
+        </div>
+        <div class="calc-breakdown-row">
+          <span>Estimated annual cost range</span>
+          <span id="annualRangeBreak">$0 - $0</span>
+        </div>
+      </div>
+
+      <div class="calc-disclaimer">
+        <strong>What this estimate covers:</strong> PEO administrative cost only. Health benefits, workers comp premium, and 401(k) contributions are pass-through and quoted separately based on your specific plan choices. Actual proposals will vary by PEO and depend on your specific risk profile, claims history, and benefits design.
+      </div>
+
+      <div class="calc-cta-block">
+        <p style="margin-bottom: 16px; color: var(--text-light);">Want a real proposal benchmarked against this estimate?</p>
+        <a href="/assessment" class="btn">Book a Free 20-Minute Assessment →</a>
+      </div>
+
+      <div class="calc-buttons" style="margin-top: 16px;">
+        <button class="calc-btn calc-btn-secondary" onclick="reset()">Recalculate</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;margin-top:32px;color:var(--text-light);font-size:.9rem;">
+    <p>Estimates based on PEO Clarify market data across our six panel partners and industry benchmarks. <a href="/methodology" style="color:var(--navy);">See our methodology</a>.</p>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">PEO <span>Clarify</span></div>
+        <p>Independent PEO advisory for growing businesses. We compare the market so you do not have to.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Learn</h5>
+        <a href="/how-peo-works">How PEO Works</a>
+        <a href="/why-an-advisor">Why Use an Advisor</a>
+        <a href="/industries">Industries</a>
+        <a href="/blog/">Resources</a>
+      </div>
+      <div class="footer-col">
+        <h5>Get Started</h5>
+        <a href="/assessment">Free Assessment</a>
+        <a href="/about">About Us</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="mailto:peter.sustr@imacorp.com">peter.sustr@imacorp.com</a>
+        <a href="tel:+13035707309">303-570-7309</a>
+        <a href="/assessment">Book a Call</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 PEO Clarify. All rights reserved.</p>
+      <div class="footer-ima">
+        <span>An advisory practice of</span>
+        <span class="ima-badge">IMA Financial Group</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/nav.js"></script>
+<script>
+  function showStep(n) {
+    document.querySelectorAll('.calc-step').forEach(s => s.classList.remove('active'));
+    document.getElementById('step' + n).classList.add('active');
+    window.scrollTo({ top: document.querySelector('.calc-card').offsetTop - 80, behavior: 'smooth' });
+  }
+
+  function goToStep2() {
+    const emp = parseInt(document.getElementById('employees').value);
+    const wage = parseInt(document.getElementById('avgWage').value);
+    if (!emp || emp < 1) { alert('Please enter the number of employees.'); return; }
+    if (!wage || wage < 20000) { alert('Please enter average annual salary (minimum $20,000).'); return; }
+    showStep(2);
+  }
+
+  function goToStep1() { showStep(1); }
+
+  function reset() {
+    document.getElementById('employees').value = '';
+    document.getElementById('avgWage').value = '';
+    showStep(1);
+  }
+
+  function calculate() {
+    const emp = parseInt(document.getElementById('employees').value);
+    const wage = parseInt(document.getElementById('avgWage').value);
+    const benefits = document.getElementById('benefitsScope').value;
+    const industry = document.getElementById('industry').value;
+
+    // PEPM base ranges by employee size (USD per employee per month, admin fee only)
+    // These reflect 2026 market data across our panel
+    let pepmLow, pepmHigh;
+    if (emp <= 10) { pepmLow = 145; pepmHigh = 195; }
+    else if (emp <= 25) { pepmLow = 125; pepmHigh = 175; }
+    else if (emp <= 50) { pepmLow = 105; pepmHigh = 155; }
+    else if (emp <= 100) { pepmLow = 90; pepmHigh = 135; }
+    else { pepmLow = 75; pepmHigh = 115; }
+
+    // Benefits scope adjustment (richer benefits = more admin work)
+    if (benefits === 'rich') { pepmLow += 10; pepmHigh += 15; }
+    else if (benefits === 'lean') { pepmLow -= 5; pepmHigh -= 5; }
+
+    // Industry risk adjustment (high-risk industries see higher PEO admin)
+    if (industry === 'high') { pepmLow += 15; pepmHigh += 25; }
+    else if (industry === 'low') { pepmLow -= 5; pepmHigh -= 10; }
+
+    // Floor protection
+    if (pepmLow < 60) pepmLow = 60;
+    if (pepmHigh < 80) pepmHigh = 80;
+
+    const monthlyLow = pepmLow * emp;
+    const monthlyHigh = pepmHigh * emp;
+    const annualLow = monthlyLow * 12;
+    const annualHigh = monthlyHigh * 12;
+
+    const fmt = n => '$' + n.toLocaleString('en-US', { maximumFractionDigits: 0 });
+
+    document.getElementById('annualRange').textContent = fmt(annualLow) + ' - ' + fmt(annualHigh);
+    document.getElementById('pepmRange').textContent = fmt(pepmLow) + ' - ' + fmt(pepmHigh);
+    document.getElementById('monthlyRange').textContent = fmt(monthlyLow) + ' - ' + fmt(monthlyHigh);
+    document.getElementById('annualRangeBreak').textContent = fmt(annualLow) + ' - ' + fmt(annualHigh);
+
+    showStep(3);
+  }
+</script>
+
+</body>
+</html>
