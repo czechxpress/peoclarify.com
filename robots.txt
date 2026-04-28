@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.peoclarify.com/sitemap.xml
+Sitemap: https://peoclarify.com/sitemap.xml
