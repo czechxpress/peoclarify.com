@@ -24,7 +24,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-GA_ID_EXPECTED = ""  # set when GA4 Measurement ID is provisioned, e.g. "G-XXXXXXXXXX"
+GA_ID_EXPECTED = "G-KHSV52SZF6"  # GA4 Measurement ID set 2026-04-29
 
 errors = []
 warnings = []
