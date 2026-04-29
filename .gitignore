@@ -1,0 +1,22 @@
+# Deploy tokens, never commit
+.gh_token
+.peoclarify_token
+*.token
+.secrets/
+*.env
+.env.local
+
+# OS and editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Build and cache (none currently, future proofing)
+node_modules/
+dist/
+.cache/
+__pycache__/
+*.pyc
