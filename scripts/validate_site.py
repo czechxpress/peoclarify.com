@@ -117,6 +117,41 @@ def check_footer_contact(path, body):
     if not (has_assessment or has_email):
         warn(f"{path.relative_to(ROOT)}: no assessment link or contact email in body")
 
+
+def check_og_meta(path, body):
+    if path.name == "404.html":
+        return  # 404 has noindex, OG less important but we added it anyway
+    required = [
+        ("og:type", r'property="og:type"'),
+        ("og:title", r'property="og:title"'),
+        ("og:description", r'property="og:description"'),
+        ("og:url", r'property="og:url"'),
+        ("og:image", r'property="og:image"'),
+        ("twitter:card", r'name="twitter:card"'),
+    ]
+    import re as _re
+    for name, pat in required:
+        if not _re.search(pat, body):
+            err(f"{path.relative_to(ROOT)}: missing meta {name}")
+
+def check_breadcrumb_schema(path, body):
+    # Homepage and 404 don't need breadcrumbs
+    if path.name in ("404.html",):
+        return
+    if path == ROOT / "index.html":
+        return
+    if "BreadcrumbList" not in body:
+        err(f"{path.relative_to(ROOT)}: missing BreadcrumbList schema")
+
+def check_referenced_images_exist(path, body):
+    """Find <img src='/images/...'> and verify the file exists in the repo."""
+    import re as _re
+    for m in _re.finditer(r'src="(/images/[^"]+)"', body):
+        rel = m.group(1).lstrip("/")
+        target = ROOT / rel
+        if not target.exists():
+            err(f"{path.relative_to(ROOT)}: referenced image not found: /{rel}")
+
 # ---------- whole-site checks ----------
 def check_sitemap_coverage(html_files):
     sitemap = ROOT / "sitemap.xml"
@@ -194,6 +229,9 @@ def main():
         check_closing_tags(path, body)
         check_ga(path, body)
         check_footer_contact(path, body)
+        check_og_meta(path, body)
+        check_breadcrumb_schema(path, body)
+        check_referenced_images_exist(path, body)
     check_sitemap_coverage(html_files)
     check_blog_index_coverage(html_files)
     check_redirect_coverage(html_files)
