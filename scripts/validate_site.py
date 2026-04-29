@@ -100,10 +100,13 @@ def check_closing_tags(path, body):
         if f"</{tag}>" not in body.lower():
             err(f"{path.relative_to(ROOT)}: missing closing </{tag}>")
 
+# Tracks pages missing GA so we emit one summary line instead of 25 warnings
+_ga_missing_pages = []
+
 def check_ga(path, body):
     if not GA_ID_EXPECTED:
         if "gtag(" not in body and "googletagmanager" not in body:
-            warn(f"{path.relative_to(ROOT)}: no GA tracking (expected, GA_ID not yet set)")
+            _ga_missing_pages.append(str(path.relative_to(ROOT)))
         return
     if GA_ID_EXPECTED not in body:
         err(f"{path.relative_to(ROOT)}: GA tracking missing or wrong ID (expected {GA_ID_EXPECTED})")
@@ -195,6 +198,11 @@ def main():
     check_blog_index_coverage(html_files)
     check_redirect_coverage(html_files)
 
+    if _ga_missing_pages and not GA_ID_EXPECTED:
+        print(f"NOTE: GA tracking not yet provisioned. {len(_ga_missing_pages)} pages have no gtag snippet.")
+        print("      Set GA_ID_EXPECTED in scripts/validate_site.py once the GA4 Measurement ID is created;")
+        print("      validator will then HARD-FAIL any page missing the ID.")
+        print()
     if warnings:
         print(f"--- {len(warnings)} warnings ---")
         for w in warnings:
