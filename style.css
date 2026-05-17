@@ -451,3 +451,27 @@ details[open] .faq-q { color: var(--gold); }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; }
 }
+
+
+/* ===== Accessibility ===== */
+.skip-to-content {
+  position: absolute; top: -40px; left: 0;
+  background: var(--navy); color: white;
+  padding: 0.5rem 1rem; z-index: 9999;
+  text-decoration: none; font-weight: 600;
+  border-radius: 0 0 6px 0;
+  transition: top 0.2s;
+}
+.skip-to-content:focus { top: 0; outline: 2px solid var(--gold); outline-offset: 2px; }
+
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+button.hamburger {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
